@@ -1,10 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sys
 
 def is_safe(board, row, col, N):
-    # Check if it's safe to place a queen at board[row][col]
-    # Check the row
+    """
+    Check if it's safe to place a queen at board[row][col]
+    """
     for i in range(col):
         if board[i] == row or \
            board[i] - i == row - col or \
@@ -13,6 +14,9 @@ def is_safe(board, row, col, N):
     return True
 
 def solve_nqueens(N):
+    """
+    Solve the N Queens problem
+    """
     if not N.isdigit():
         print("N must be a number")
         sys.exit(1)
@@ -24,10 +28,16 @@ def solve_nqueens(N):
         sys.exit(1)
 
     def print_solution(board):
+        """
+        Print the N Queens solution
+        """
         solution = [[i, board[i]] for i in range(N)]
         print(solution)
 
     def solve(board, col):
+        """
+        Recursive function to solve N Queens
+        """
         if col == N:
             print_solution(board)
             return
