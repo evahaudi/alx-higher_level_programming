@@ -1,12 +1,19 @@
 #!/usr/bin/python3
-"""
-Module 4-append_write
-
-Contains function that appends to text file and returns num chars added
+""" Module that contains a function that appends to a text file
 """
 
 
 def append_write(filename="", text=""):
-    """appends to text file and returns num chars added"""
-    with open(filename, mode="a", encoding="utf-8") as f:
-        return(f.write(text))
+    """ Function that appends to a text file
+
+    Args:
+        filename: filename
+        text: text to write
+
+    Raises
+        Exception: when the file can be opened
+
+    """
+
+    with open(filename, 'a', encoding="utf-8") as f:
+        return f.write(text)
