@@ -1,8 +1,4 @@
--- a script that prints the full description of the table first_table from the database hbtn_0c_0 in your MySQL server.
+-- Prints the full description of the table first_table from the database
+-- Query to print full description of a table
 
--- The database name will be passed as an argument of the mysql command
--- You are not allowed to use the DESCRIBE or EXPLAIN statements
-
-SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
-FROM information_schema.COLUMNS
-WHERE TABLE_SCHEMA = 'hbtn_0c_0' AND TABLE_NAME = 'first_table';
+SHOW CREATE TABLE first_table;
