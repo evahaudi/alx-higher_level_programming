@@ -1,17 +1,13 @@
-## Python Network #0
-> Each file in this repository holds code that illustrates an essential concept
-> of cURL and HTTP request and response headers. Resources:
-> [In depth HTTP headers](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html),
-> [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies),
-> [Intranet page on curl](https://intranet.hbtn.io/concepts/51),
-> [Simple Flask API](https://github.com/holbertonschool/simple_rest_api)
+## Python Network #1
+> Fetching URL's with Python's urllib and Request. When using Github API, use ```curl -i https://api.github.com/users/[username]``` to view if exceeding query limit. Resources: [Python's urllib](https://docs.python.org/3/howto/urllib2.html),
+> [Python's Request library](http://docs.python-requests.org/en/master/)
 
 ### Environment
-* Language: Bash scripts and Python (#6)
+* Language: Python 3.4.3
 * OS: Ubuntu 14.04 LTS
-* Container: yes
-* Style guidelines: [Shellscript for Bash](https://github.com/koalaman/shellcheck)
+* Style guidelines: [PEP 8 (version 1.7) for Python 3.5](https://www.python.org/dev/peps/pep-0008/) || [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
 
-## Authors
+---
+### Authors
 EVERLYNE AKINYI
 
