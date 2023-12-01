@@ -3,12 +3,20 @@
 given username and pw as param, get your id from Github api
 usage: ./10-my_github.py [github_username] [github_pw]
 """
-from sys import argv
+
 import requests
-from requests.auth import HTTPBasicAuth
+import sys
 
+if _name_ == "_main_":
+    username = sys.argv[1]
+    password = sys.argv[2]
 
-if __name__ == "__main__":
-    url = 'https://api.github.com/users/{}'.format(argv[1])
-    r = requests.get(url, auth=HTTPBasicAuth(argv[1], argv[2]))
-    print(r.json().get('id'))
+    url = 'https://api.github.com/user'
+    response = requests.get(url, auth=(username, password))
+
+    if response.status_code == 200:
+        user_info = response.json()
+        user_id = user_info.get('id')
+        print(user_id)
+    else:
+        print(None)
